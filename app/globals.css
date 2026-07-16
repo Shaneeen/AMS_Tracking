@@ -10,10 +10,18 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #f7f7f4;
-  color: #1f2933;
+  background: #ffffff;
+  color: #4a4a4a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -24,4 +32,29 @@ a {
 ::selection {
   background: #4fa8a0;
   color: #ffffff;
+}
+
+/* Consistent, accessible focus ring across all interactive elements */
+@layer base {
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #4fa8a0;
+    border-radius: 6px;
+  }
+}
+
+/* Subtle scrollbars for inner scroll regions */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d2 transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #e8e8e8;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }

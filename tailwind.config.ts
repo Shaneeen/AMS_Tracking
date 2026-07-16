@@ -7,13 +7,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: "#E5E5E5",
-        background: "#F7F7F4",
-        surface: "#FFFFFF",
-        primary: "#014539",
+        border: "#E8E8E8",
+        background: "#FFFFFF",
+        surface: "#F7F5F0",
+        primary: "#00655D",
         secondary: "#4FA8A0",
-        accent: "#DAA751",
-        text: "#1F2933",
+        accent: "#DFAE52",
+        text: "#4A4A4A",
+        heading: "#111111",
         muted: "#6B7280",
         success: "#16A34A",
         warning: "#D97706",
